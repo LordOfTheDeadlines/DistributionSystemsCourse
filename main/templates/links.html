@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+
+      <h3>
+         <a href = "{{ url_for('links.show_all') }}">all links</a>
+      </h3>
+
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+
+      <h3>Links (<a href = "{{ url_for('links.add_link') }}">Add Link
+         </a>)</h3>
+
+      {% for link in links %}
+         <li>{{ link.link}} - <a href = "{{'/links/%s'%link.id}}">info
+         </a></li>
+      {% endfor %}
+
+   </body>
+</html>

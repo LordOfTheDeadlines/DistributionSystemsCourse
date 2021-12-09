@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+
+      <h3>
+         <a href = "{{ url_for('links.show_all') }}">all links</a>
+      </h3>
+
+      <hr/>
+	<li>id - {{link.id}}</li>
+	<li>link - {{link.link}}</li>
+	<li>description - {{link.description}}</li>
+    <li>status code - {{link.status_code}}</li>
+   </body>
+</html>
